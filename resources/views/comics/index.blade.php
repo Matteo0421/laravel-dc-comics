@@ -3,9 +3,9 @@
 @section('content')
 
 <div class="container">
-    <h1 class="text-center m-4 ">I FUMETTI DISPONIBILI</h1>
+    <h1 class="text-center m-4 text-white  ">I FUMETTI DISPONIBILI</h1>
 
-<table class="table">
+<table class="table table-dark ">
     <thead>
       <tr>
         <th scope="col">ID</th>
@@ -27,7 +27,11 @@
             <th >{{$comic->type}}</th>
             <th >{{$comic->sale_date}}</th>
             <th >{{$comic->price}}</th>
-            <th >{{$comic->departure_time}}</th>
+            <th >
+              <a href="{{ route('comics.show', $comic->id)}}" class="btn btn-danger"><i class="fa-regular fa-eye"></i></a>
+              <button class="btn btn-danger"><i class="fa-solid fa-pencil"></i></button>
+              <button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+            </th>
 
         </tr>
         @endforeach

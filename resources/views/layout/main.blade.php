@@ -13,13 +13,14 @@
 
     <title>Comics</title>
 </head>
-<body>
+<body class="bg-dark">
     @include('partials.header')
 
-    <main class="container">
+    <main class="container ">
         @yield('content')
     </main>
 
     @include('partials.footer')
 </body>
 </html>
+
