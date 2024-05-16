@@ -29,8 +29,8 @@
             <th >{{$comic->price}}</th>
             <th >
               <a href="{{ route('comics.show', $comic->id)}}" class="btn btn-danger"><i class="fa-regular fa-eye"></i></a>
-              <button class="btn btn-danger"><i class="fa-solid fa-pencil"></i></button>
-              <button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+              <a class="btn btn-danger"><i class="fa-solid fa-pencil"></i></a>
+              <a class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
             </th>
 
         </tr>

@@ -13,6 +13,9 @@
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="{{route('comics.index')}}">I nostri Comics</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="{{route('comics.create')}}">Nuovo Comics</a>
+                </li>
 
               </ul>
             </div>

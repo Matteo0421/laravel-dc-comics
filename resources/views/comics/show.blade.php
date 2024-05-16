@@ -49,6 +49,10 @@
             </div>
         </div>
 
+        <div class="my-5">
+            <a href="{{route('comics.index')}}" class="btn btn-danger "><i class="fa-solid fa-backward"></i></a>
+        </div>
+
 
     </div>
 
