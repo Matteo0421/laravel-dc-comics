@@ -1,0 +1,26 @@
+footer{
+    background-color: #1A1A1A;
+    color: white;
+
+  }ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+  }a{
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: .8rem;
+
+  }a:hover{
+    text-decoration: underline;
+  }
+
+  h4,
+  .trovaci{
+    margin-left: 32px;
+  }
+
+  .bottom-bar{
+    padding: 30px 0;
+  }
