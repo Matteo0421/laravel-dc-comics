@@ -2,71 +2,72 @@
 
 @section('content')
 
-<h1 class="my-3 text-white">Nome Fumetto Comics D.C.</h1>
+<h1 class="my-3 text-white">{{$comic->title}}</h1>
 
 <div class="row">
     <div class="col">
-        <form action="{{route('comics.store')}}" method="POST">
+        <form action="{{route('comics.update', $comic)}}" method="POST">
             @csrf
+            @method('PUT')
             <div class="mb-3 text-white">
 
              <label for="title" class="form-label ">Titolo</label>
-             <input name="title" type="Text" class="form-control" id="title" >
+             <input name="title" type="Text" class="form-control" id="title" value="{{$comic->title}}">
 
             </div>
             <div class="mb-3 text-white">
 
              <label for="slug" class="form-label">Slug</label>
-             <input name="slug" type="Text" class="form-control" id="slug" >
+             <input name="slug" type="Text" class="form-control" id="slug"  value="{{$comic->slug}}">
 
             </div>
             <div class="mb-3 text-white">
 
              <label for="description" class="form-label ">Descrizione</label>
-             <textarea name="description" class="form-control" id="description"> </textarea>
+             <textarea name="description" class="form-control" id="description">value="{{$comic->description}}" </textarea>
 
             </div>
 
             <div class="mb-3 text-white">
 
              <label for="thumb" class="form-label">Copertina</label>
-             <input name="thumb" type="Text" class="form-control" id="thumb" >
+             <input name="thumb" type="Text" class="form-control" id="thumb"  value="{{$comic->thumb}}" >
 
             </div>
 
             <div class="mb-3 text-white">
 
              <label for="price" class="form-label">Prezzo</label>
-             <input name="price" type="Text" class="form-control" id="price" >
+             <input name="price" type="Text" class="form-control" id="price"  value="{{$comic->price}}">
 
             </div>
             <div class="mb-3 text-white">
 
              <label for="series" class="form-label">Saga</label>
-             <input name="series" type="Text" class="form-control" id="series" >
+             <input name="series" type="Text" class="form-control" id="series"  value="{{$comic->series}}">
 
             </div>
             <div class="mb-3 text-white">
 
              <label for="sale_date" class="form-label">Giorno di Uscita</label>
-             <input name="sale_date" type="Text" class="form-control" id="sale_date" >
+             <input name="sale_date" type="Text" class="form-control" id="sale_date"  value="{{$comic->sale_date}}" >
 
             </div>
             <div class="mb-3 text-white ">
 
              <label for="type" class="form-label ">Genere</label>
-             <input name="type" type="Text" class="form-control" id="type" >
+             <input name="type" type="Text" class="form-control" id="type"  value="{{$comic->type}}">
 
             </div>
 
             <div class="mb-3 text-white">
                 <label for="artists" class="form-label">Artisti</label>
-                <textarea name="artists" class="form-control" id="artists"></textarea>
+                <textarea name="artists" class="form-control" id="artists"> value="{{$comic->artists}}"</textarea>
             </div>
 
             <div class="mb-3 text-white">
                 <label for="writers" class="form-label">Sceneggiatori</label>
-                <textarea name="writers" class="form-control" id="writers"></textarea>
+                <textarea name="writers" class="form-control" id="writers"> value="{{$comic->writers}}"</textarea>
             </div>
 
             <div class="mb-4 mt-4">
