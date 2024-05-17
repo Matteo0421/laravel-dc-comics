@@ -69,9 +69,11 @@
                 <textarea name="writers" class="form-control" id="writers"></textarea>
             </div>
 
-            <button class="btn btn-danger" type="submit">Invia il nuovo Fumetto</button>
+            <div class="mb-4 mt-4">
+                <button class="btn btn-danger" type="submit">Invia il nuovo Fumetto</button>
 
             <button class="btn btn-warning" type="submit">Reset</button>
+            </div>
 
          </form>
     </div>
