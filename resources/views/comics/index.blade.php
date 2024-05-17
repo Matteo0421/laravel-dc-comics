@@ -5,6 +5,13 @@
 <div class="container">
     <h1 class="text-center m-4 text-white  ">I FUMETTI DISPONIBILI</h1>
 
+    @if (session('deleted'))
+      <div class="alert alert-danger " role="alert">
+        {{ session('deleted')}}
+      </div>
+
+    @endif
+
 <table class="table table-dark ">
     <thead>
       <tr>
@@ -27,10 +34,21 @@
             <th >{{$comic->type}}</th>
             <th >{{$comic->sale_date}}</th>
             <th >{{$comic->price}}</th>
-            <th >
+            <th class="d-flex">
               <a href="{{ route('comics.show', $comic->id)}}" class="btn btn-danger"><i class="fa-regular fa-eye"></i></a>
               <a class="btn btn-danger"><i class="fa-solid fa-pencil"></i></a>
-              <a class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
+
+              <form
+               action="{{route('comics.destroy', $comic)}}"
+               method="POST"
+               onsubmit="return confirm('sei sicuro di voler eliminare {{ $comic->title}}?')"
+               >
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+
+
+             </form>
             </th>
 
         </tr>

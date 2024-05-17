@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
 
-    <title>Comics</title>
+    <title>Comics-Carola-Matteo</title>
 </head>
 <body class="bg-dark">
     @include('partials.header')
