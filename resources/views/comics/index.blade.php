@@ -36,7 +36,7 @@
             <th >{{$comic->price}}</th>
             <th class="d-flex">
               <a href="{{ route('comics.show', $comic->id)}}" class="btn btn-danger"><i class="fa-regular fa-eye"></i></a>
-              <a class="btn btn-danger"><i class="fa-solid fa-pencil"></i></a>
+              <a href="{{ route('comics.edit' , $comic)}}" class="btn btn-danger"><i class="fa-solid fa-pencil"></i></a>
 
               <form
                action="{{route('comics.destroy', $comic)}}"
