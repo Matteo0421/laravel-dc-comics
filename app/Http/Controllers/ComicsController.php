@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Comic;
 use App\Functions\Helper;
 use Illuminate\Http\Request;
-
+use App\Http\Requests\ComicRequest;
 class ComicsController extends Controller
 {
     /**
@@ -31,7 +31,7 @@ class ComicsController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(ComicRequest $request)
     {
         //
         $form_data = $request->all();
@@ -54,7 +54,7 @@ class ComicsController extends Controller
 
         $new_comic = new Comic();
         $new_comic->slug = Helper::generateSlug($new_comic->title, new Comic());
-          $new_comic->artists = json_encode(explode(',', $form_data['artists']));
+        $new_comic->artists = json_encode(explode(',', $form_data['artists']));
         $new_comic->writers = json_encode(explode(',', $form_data['writers']));
         $new_comic->fill($form_data);
         $new_comic->save();
@@ -87,7 +87,7 @@ class ComicsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Comic $comic)
+    public function update(ComicRequest $request, Comic $comic)
     {
         $form_data = $request->all();
         if($form_data['title'] === $comic->title){

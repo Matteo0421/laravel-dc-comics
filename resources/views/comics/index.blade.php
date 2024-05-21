@@ -20,7 +20,7 @@
         <th scope="col">TIPO</th>
         <th scope="col">DATA</th>
         <th scope="col">PREZZO</th>
-        <th scope="col">AZIONE</th>
+        <th  scope="col">AZIONE</th>
 
       </tr>
     </thead>
@@ -34,7 +34,7 @@
             <th >{{$comic->type}}</th>
             <th >{{$comic->sale_date}}</th>
             <th >{{$comic->price}}</th>
-            <th class="d-flex">
+            <th class="d-flex ">
               <a href="{{ route('comics.show', $comic->id)}}" class="btn btn-danger"><i class="fa-regular fa-eye"></i></a>
               <a href="{{ route('comics.edit' , $comic)}}" class="btn btn-danger"><i class="fa-solid fa-pencil"></i></a>
 
